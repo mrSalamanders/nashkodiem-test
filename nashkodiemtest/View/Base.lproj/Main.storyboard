@@ -13,7 +13,7 @@
         <!--Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntryViewController" id="BYZ-38-t0r" customClass="EntryViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,31 +48,36 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TB5-Gh-11r"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="h6J-HI-UWS" kind="show" identifier="LogIn" id="Par-eF-gTj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="80"/>
+            <point key="canvasLocation" x="1391" y="80"/>
         </scene>
-        <!--Navigation Gallery View Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="fgI-F3-fzr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kng-ke-EX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="dza-1w-MQV" customClass="NavigationGalleryViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" id="dza-1w-MQV" customClass="NavigationViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wTK-YM-QNs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="h6J-HI-UWS" kind="relationship" relationship="rootViewController" id="MB4-yd-IwA"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="92i-ny-1Ib"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kng-ke-EX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="80"/>
+            <point key="canvasLocation" x="484" y="80"/>
         </scene>
         <!--Mobile Up Gallery-->
         <scene sceneID="Qzu-Er-TGH">
             <objects>
-                <collectionViewController id="h6J-HI-UWS" customClass="CollectionGalleryCollectionViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionViewController" id="h6J-HI-UWS" customClass="CollectionViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oKk-pE-dKo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,14 +106,25 @@
                     <navigationItem key="navigationItem" title="Mobile Up Gallery" id="U6z-NT-TUL">
                         <barButtonItem key="rightBarButtonItem" title="Выход" style="plain" id="9lZ-vY-tno">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="LogOutButton:" destination="h6J-HI-UWS" id="mum-ua-CtP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogOut" id="4mc-X7-DuZ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1b-ZW-XH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="80"/>
+            <point key="canvasLocation" x="2275" y="80"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Par-eF-gTj"/>
+        <segue reference="4mc-X7-DuZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

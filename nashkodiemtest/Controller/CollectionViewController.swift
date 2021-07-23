@@ -1,18 +1,33 @@
 //
-//  CollectionGalleryCollectionViewController.swift
+//  CollectionViewController.swift
 //  nashkodiemtest
 //
 //  Created by Владислав Николаев on 23.07.2021.
 //
 
 import UIKit
+import SwiftyVK
 
 private let reuseIdentifier = "Cell"
 
-class CollectionGalleryCollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController {
 
+    
+    @IBAction func LogOutButton(_ sender: UIBarButtonItem) {
+        print("Log out")
+        VK.sessions.default.logOut()
+        self.performSegue(withIdentifier: "LogOut", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

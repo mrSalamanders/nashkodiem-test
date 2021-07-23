@@ -1,5 +1,5 @@
 //
-//  NavigationGalleryViewController.swift
+//  NavigationViewController.swift
 //  nashkodiemtest
 //
 //  Created by Владислав Николаев on 23.07.2021.
@@ -8,21 +8,12 @@
 import UIKit
 import SwiftyVK
 
-class NavigationGalleryViewController: UINavigationController {
+class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let at = VK.sessions.default.accessToken
-        if (at != nil) {
-            if (at!.isValid) {
-                print("Access Granted")
-            }
-        } else {
-            print("Move to log screen")
-        }
     }
     
 

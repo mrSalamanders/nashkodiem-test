@@ -15,6 +15,8 @@ class CustomVKDelegate: SwiftyVKDelegate {
     
     init() {
         VK.setUp(appId: appId, delegate: self)
+        VK.sessions.default.config.language = Language.ru
+        VK.sessions.default.config.handleErrors = true
     }
     
     func vkNeedsScopes(for sessionId: String) -> Scopes {
@@ -25,15 +27,9 @@ class CustomVKDelegate: SwiftyVKDelegate {
         // This code works only for simplest cases and one screen applications
         // If you have application with two or more screens, you should use different implementation
         // HINT: google it - get top most UIViewController
-        #if os(macOS)
-            if let contentController = NSApplication.shared.keyWindow?.contentViewController {
-                contentController.presentAsSheet(viewController)
-            }
-        #elseif os(iOS)
             if let rootController = UIApplication.shared.keyWindow?.rootViewController {
                 rootController.present(viewController, animated: true)
             }
-        #endif
     }
     
     func vkTokenCreated(for sessionId: String, info: [String : String]) {
