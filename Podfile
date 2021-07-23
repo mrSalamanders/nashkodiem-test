@@ -8,5 +8,6 @@ target 'nashkodiemtest' do
   # Pods for nashkodiemtest
 
   pod 'SwiftyVK'
+  pod 'SwiftyJSON', '~> 4.0'
 
 end

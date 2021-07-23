@@ -8,10 +8,18 @@
 import UIKit
 import SwiftyVK
 
-private let reuseIdentifier = "Cell"
+
+//private let reuseIdentifier = "dataCell"
 
 class CollectionViewController: UICollectionViewController {
 
+    var collection : [ImageModel] = []
+    var manager = ImageManager()
+    
+    @IBAction func reloadData(_ sender: UIBarButtonItem) {
+        print("–––––––––––––––\(collection)––––––––––––––––")
+        self.collectionView.reloadData()
+    }
     
     @IBAction func LogOutButton(_ sender: UIBarButtonItem) {
         print("Log out")
@@ -22,10 +30,13 @@ class CollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager.fetchAll(collection: collection)
         
         self.navigationItem.setHidesBackButton(true, animated: false)
 
@@ -33,9 +44,11 @@ class CollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
+
     }
 
     /*
@@ -52,20 +65,23 @@ class CollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return collection.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dataCell", for: indexPath) as! CollectionViewCell
     
         // Configure the cell
     
+        let photo = collection[indexPath.row]
+        cell.imageView.image = photo.image
+        
         return cell
     }
 

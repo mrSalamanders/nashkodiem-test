@@ -16,6 +16,9 @@
 		016AC31226AAE32500FFAA5C /* CustomVKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC31126AAE32500FFAA5C /* CustomVKDelegate.swift */; };
 		016AC31626AAF55900FFAA5C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC31526AAF55900FFAA5C /* NavigationViewController.swift */; };
 		016AC31826AAF5AF00FFAA5C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC31726AAF5AF00FFAA5C /* CollectionViewController.swift */; };
+		01AAA00726AB28520006BB7B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AAA00626AB28520006BB7B /* CollectionViewCell.swift */; };
+		01AAA00926AB28F50006BB7B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AAA00826AB28F50006BB7B /* ImageModel.swift */; };
+		01AAA00B26AB2B880006BB7B /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AAA00A26AB2B880006BB7B /* ImageManager.swift */; };
 		89DCE79E5E85B1CC0F5D57F1 /* Pods_nashkodiemtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		016AC31126AAE32500FFAA5C /* CustomVKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVKDelegate.swift; sourceTree = "<group>"; };
 		016AC31526AAF55900FFAA5C /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		016AC31726AAF5AF00FFAA5C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		01AAA00626AB28520006BB7B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		01AAA00826AB28F50006BB7B /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		01AAA00A26AB2B880006BB7B /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nashkodiemtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990558DDADF0EC691BF36DAD /* Pods-nashkodiemtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nashkodiemtest.release.xcconfig"; path = "Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest.release.xcconfig"; sourceTree = "<group>"; };
 		C02F69EF4FDAA47337F39802 /* Pods-nashkodiemtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nashkodiemtest.debug.xcconfig"; path = "Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				016AC30226AAD21700FFAA5C /* LaunchScreen.storyboard */,
 				016AC2FD26AAD21400FFAA5C /* Main.storyboard */,
+				01AAA00626AB28520006BB7B /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 		016AC30F26AADE2700FFAA5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01AAA00826AB28F50006BB7B /* ImageModel.swift */,
+				01AAA00A26AB2B880006BB7B /* ImageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,9 +250,12 @@
 				016AC2FC26AAD21400FFAA5C /* EntryViewController.swift in Sources */,
 				016AC31826AAF5AF00FFAA5C /* CollectionViewController.swift in Sources */,
 				016AC2F826AAD21400FFAA5C /* AppDelegate.swift in Sources */,
+				01AAA00B26AB2B880006BB7B /* ImageManager.swift in Sources */,
+				01AAA00726AB28520006BB7B /* CollectionViewCell.swift in Sources */,
 				016AC2FA26AAD21400FFAA5C /* SceneDelegate.swift in Sources */,
 				016AC31626AAF55900FFAA5C /* NavigationViewController.swift in Sources */,
 				016AC31226AAE32500FFAA5C /* CustomVKDelegate.swift in Sources */,
+				01AAA00926AB28F50006BB7B /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
