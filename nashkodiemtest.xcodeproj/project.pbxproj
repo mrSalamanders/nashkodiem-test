@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		016AC2F826AAD21400FFAA5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC2F726AAD21400FFAA5C /* AppDelegate.swift */; };
 		016AC2FA26AAD21400FFAA5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC2F926AAD21400FFAA5C /* SceneDelegate.swift */; };
-		016AC2FC26AAD21400FFAA5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC2FB26AAD21400FFAA5C /* ViewController.swift */; };
+		016AC2FC26AAD21400FFAA5C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC2FB26AAD21400FFAA5C /* EntryViewController.swift */; };
 		016AC2FF26AAD21400FFAA5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016AC2FD26AAD21400FFAA5C /* Main.storyboard */; };
 		016AC30126AAD21700FFAA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016AC30026AAD21700FFAA5C /* Assets.xcassets */; };
 		016AC30426AAD21700FFAA5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016AC30226AAD21700FFAA5C /* LaunchScreen.storyboard */; };
+		016AC30D26AADD6400FFAA5C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC30C26AADD6400FFAA5C /* GalleryViewController.swift */; };
+		89DCE79E5E85B1CC0F5D57F1 /* Pods_nashkodiemtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		016AC2F426AAD21400FFAA5C /* nashkodiemtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nashkodiemtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016AC2F726AAD21400FFAA5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016AC2F926AAD21400FFAA5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		016AC2FB26AAD21400FFAA5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		016AC2FB26AAD21400FFAA5C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		016AC2FE26AAD21400FFAA5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		016AC30026AAD21700FFAA5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		016AC30326AAD21700FFAA5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		016AC30526AAD21700FFAA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016AC30C26AADD6400FFAA5C /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nashkodiemtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		990558DDADF0EC691BF36DAD /* Pods-nashkodiemtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nashkodiemtest.release.xcconfig"; path = "Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest.release.xcconfig"; sourceTree = "<group>"; };
+		C02F69EF4FDAA47337F39802 /* Pods-nashkodiemtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nashkodiemtest.debug.xcconfig"; path = "Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DCE79E5E85B1CC0F5D57F1 /* Pods_nashkodiemtest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				016AC2F626AAD21400FFAA5C /* nashkodiemtest */,
 				016AC2F526AAD21400FFAA5C /* Products */,
+				45B385415127B27A68394733 /* Pods */,
+				3696CE97C6EE315AF63A2E61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +67,56 @@
 			children = (
 				016AC2F726AAD21400FFAA5C /* AppDelegate.swift */,
 				016AC2F926AAD21400FFAA5C /* SceneDelegate.swift */,
-				016AC2FB26AAD21400FFAA5C /* ViewController.swift */,
-				016AC2FD26AAD21400FFAA5C /* Main.storyboard */,
+				016AC30F26AADE2700FFAA5C /* Model */,
+				016AC30B26AADD3A00FFAA5C /* Controller */,
+				016AC30E26AADE0200FFAA5C /* View */,
 				016AC30026AAD21700FFAA5C /* Assets.xcassets */,
-				016AC30226AAD21700FFAA5C /* LaunchScreen.storyboard */,
 				016AC30526AAD21700FFAA5C /* Info.plist */,
 			);
 			path = nashkodiemtest;
+			sourceTree = "<group>";
+		};
+		016AC30B26AADD3A00FFAA5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				016AC2FB26AAD21400FFAA5C /* EntryViewController.swift */,
+				016AC30C26AADD6400FFAA5C /* GalleryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		016AC30E26AADE0200FFAA5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				016AC30226AAD21700FFAA5C /* LaunchScreen.storyboard */,
+				016AC2FD26AAD21400FFAA5C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		016AC30F26AADE2700FFAA5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3696CE97C6EE315AF63A2E61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45B385415127B27A68394733 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C02F69EF4FDAA47337F39802 /* Pods-nashkodiemtest.debug.xcconfig */,
+				990558DDADF0EC691BF36DAD /* Pods-nashkodiemtest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016AC30826AAD21700FFAA5C /* Build configuration list for PBXNativeTarget "nashkodiemtest" */;
 			buildPhases = (
+				EE87C45D9376A138298BECBA /* [CP] Check Pods Manifest.lock */,
 				016AC2F026AAD21400FFAA5C /* Sources */,
 				016AC2F126AAD21400FFAA5C /* Frameworks */,
 				016AC2F226AAD21400FFAA5C /* Resources */,
+				1790861D9630A454DE82164F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +186,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1790861D9630A454DE82164F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE87C45D9376A138298BECBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nashkodiemtest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		016AC2F026AAD21400FFAA5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				016AC2FC26AAD21400FFAA5C /* ViewController.swift in Sources */,
+				016AC2FC26AAD21400FFAA5C /* EntryViewController.swift in Sources */,
+				016AC30D26AADD6400FFAA5C /* GalleryViewController.swift in Sources */,
 				016AC2F826AAD21400FFAA5C /* AppDelegate.swift in Sources */,
 				016AC2FA26AAD21400FFAA5C /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +380,7 @@
 		};
 		016AC30926AAD21700FFAA5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02F69EF4FDAA47337F39802 /* Pods-nashkodiemtest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +401,7 @@
 		};
 		016AC30A26AAD21700FFAA5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 990558DDADF0EC691BF36DAD /* Pods-nashkodiemtest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
