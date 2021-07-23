@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dza-1w-MQV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -51,12 +51,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+            <point key="canvasLocation" x="52" y="80"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Gallery View Controller-->
         <scene sceneID="fgI-F3-fzr">
             <objects>
-                <navigationController id="dza-1w-MQV" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kng-ke-EX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="dza-1w-MQV" customClass="NavigationGalleryViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wTK-YM-QNs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,14 +66,13 @@
                         <segue destination="h6J-HI-UWS" kind="relationship" relationship="rootViewController" id="MB4-yd-IwA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kng-ke-EX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="833" y="80"/>
         </scene>
         <!--Mobile Up Gallery-->
         <scene sceneID="Qzu-Er-TGH">
             <objects>
-                <collectionViewController id="h6J-HI-UWS" sceneMemberID="viewController">
+                <collectionViewController id="h6J-HI-UWS" customClass="CollectionGalleryCollectionViewController" customModule="nashkodiemtest" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oKk-pE-dKo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
