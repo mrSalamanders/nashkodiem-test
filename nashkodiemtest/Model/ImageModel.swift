@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class ImageModel {
-    var image : UIImage
+struct ImageModel {
+    var imageURL : URL
     var timestamp : Date
     
-    init(image: UIImage, timestamp: Date) {
-        self.image = image
+    init(imageURL: URL, timestamp: Date) {
+        self.imageURL = imageURL
         self.timestamp = timestamp
     }
 }
