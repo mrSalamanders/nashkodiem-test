@@ -14,8 +14,6 @@ private let reuseIdentifier = "dataCell"
 
 class CollectionViewController: UICollectionViewController {
     
-//    var images = [ImageModel(imageURL: URL(string: "https://sun9-81.userapi.com/impg/5tAteArP7UPg8S1Q7npfthYFQ4qrpwY2BOpprQ/9zkOOQF-h5c.jpg?size=604x403&quality=96&sign=1bee0317a6387c1678dae29e9cd2af97&c_uniq_tag=zKz1A6aWiIyOmoi6rbHBu3g8MJDq1V1_UcBYfs5sRxY&type=album")!, timestamp: Date(timeIntervalSinceNow: 1245)), ImageModel(imageURL: URL(string: "https://sun9-81.userapi.com/impg/5tAteArP7UPg8S1Q7npfthYFQ4qrpwY2BOpprQ/9zkOOQF-h5c.jpg?size=604x403&quality=96&sign=1bee0317a6387c1678dae29e9cd2af97&c_uniq_tag=zKz1A6aWiIyOmoi6rbHBu3g8MJDq1V1_UcBYfs5sRxY&type=album")!, timestamp: Date(timeIntervalSinceNow: -124))]
-    
     var images = [ImageModel]()
     
     @IBAction func LogOutButton(_ sender: UIBarButtonItem) {
@@ -38,32 +36,18 @@ class CollectionViewController: UICollectionViewController {
         
     }
     
-    // MARK: UICollectionViewDataSource
-    
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-    
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return images.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         let imageObject = self.images[indexPath.row]
-        
-        let formatter1 = DateFormatter()
-        formatter1.dateStyle = .short
-        
-//        myCell.labelOutlet.text = formatter1.string(from: imageObject.timestamp)
         
         var cell = UICollectionViewCell()
         
         if let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dataCell", for: indexPath) as? CollectionViewCell {
-            imageCell.configure(with: formatter1.string(from: imageObject.timestamp), url: imageObject.imageURL)
+            imageCell.configure(url: imageObject.imageURL)
             imageCell.layoutIfNeeded()
             cell = imageCell
         }
@@ -104,10 +88,18 @@ class CollectionViewController: UICollectionViewController {
         .send()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            PhotoViewController, let index =
+            collectionView.indexPathsForSelectedItems?.first {
+            destination.photo = images[index.row]
+        }
+    }
+    
 }
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -115,13 +107,13 @@ extension UIImageView {
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, error == nil,
                 let image = UIImage(data: data)
-                else { return }
+            else { return }
             DispatchQueue.main.async() { [weak self] in
                 self?.image = image
             }
         }.resume()
     }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFill) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }

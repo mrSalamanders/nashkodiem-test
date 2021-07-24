@@ -17,6 +17,7 @@
 		016AC31626AAF55900FFAA5C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC31526AAF55900FFAA5C /* NavigationViewController.swift */; };
 		016AC31826AAF5AF00FFAA5C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AC31726AAF5AF00FFAA5C /* CollectionViewController.swift */; };
 		01719C1426AC3BE200C29B80 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01719C1326AC3BE100C29B80 /* CollectionViewCell.swift */; };
+		01719C1626AC511300C29B80 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01719C1526AC511300C29B80 /* PhotoViewController.swift */; };
 		01AAA00926AB28F50006BB7B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AAA00826AB28F50006BB7B /* ImageModel.swift */; };
 		89DCE79E5E85B1CC0F5D57F1 /* Pods_nashkodiemtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		016AC31526AAF55900FFAA5C /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		016AC31726AAF5AF00FFAA5C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		01719C1326AC3BE100C29B80 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		01719C1526AC511300C29B80 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		01AAA00826AB28F50006BB7B /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		364B2114BCB910D03ABD01D5 /* Pods_nashkodiemtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nashkodiemtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990558DDADF0EC691BF36DAD /* Pods-nashkodiemtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nashkodiemtest.release.xcconfig"; path = "Target Support Files/Pods-nashkodiemtest/Pods-nashkodiemtest.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				016AC31526AAF55900FFAA5C /* NavigationViewController.swift */,
 				016AC2FB26AAD21400FFAA5C /* EntryViewController.swift */,
+				01719C1526AC511300C29B80 /* PhotoViewController.swift */,
 				016AC31726AAF5AF00FFAA5C /* CollectionViewController.swift */,
 			);
 			path = Controller;
@@ -249,6 +252,7 @@
 				01719C1426AC3BE200C29B80 /* CollectionViewCell.swift in Sources */,
 				016AC2F826AAD21400FFAA5C /* AppDelegate.swift in Sources */,
 				016AC2FA26AAD21400FFAA5C /* SceneDelegate.swift in Sources */,
+				01719C1626AC511300C29B80 /* PhotoViewController.swift in Sources */,
 				016AC31626AAF55900FFAA5C /* NavigationViewController.swift in Sources */,
 				016AC31226AAE32500FFAA5C /* CustomVKDelegate.swift in Sources */,
 				01AAA00926AB28F50006BB7B /* ImageModel.swift in Sources */,

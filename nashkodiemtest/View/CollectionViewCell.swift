@@ -9,13 +9,10 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var testLabel: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
     
-    func configure(with text: String, url: URL) {
-        print("%%%%%%%%%%%%%%%%%%\(text)")
-        print("%%%%%%%%%%%%%%%%%%\(url)")
-        testLabel.text = text
+    func configure(url: URL) {
         imageView.downloaded(from: url)
     }
 }
